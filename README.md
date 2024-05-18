@@ -1,6 +1,6 @@
 # Welcome to an archive of my work in Oberlin's CSCI 373, Applied Machine Learning 
 
-Stored in this repository are copies of my homeworks 1-5 from Applied Machine Learning in Spring of 2024.
+Stored in this repository are copies of homeworks 1-5 from my work in Applied Machine Learning in Spring of 2024.
 
 Homeworks 2-5 were completed in collaboration with Mario Stinson-Maas, who can currently be found at `github.com/Mario730`.
 
