@@ -1,0 +1,23 @@
+Calculations of confidence intervals:
+
+        model        MAE         VMAE    file    CIlower    CIupper
+0      Linear  53.170526  6019.431319  energy  51.742038  54.599013
+1         SVM  40.669065  7655.202024  energy  39.058133  42.279996
+2  Neural Net  49.932964  5381.498900  energy  48.582291  51.283638
+
+        model         MAE          VMAE       file     CIlower     CIupper
+0      Linear  327.624467  78732.765469  seoulbike  319.736199  335.512735
+1         SVM  283.155027  92359.138071  seoulbike  274.611369  291.698684
+2  Neural Net  184.648541  37625.996384  seoulbike  179.195385  190.101697
+
+        model  accuracy      file   CIlower   CIupper
+0        K-NN      0.98  penguins  0.959108  1.000892
+1        Tree      0.94  penguins  0.904560  0.975440
+2      Forest      0.97  penguins  0.944543  0.995457
+3  Neural Net      0.99  penguins  0.975152  1.004848
+
+        model  accuracy       file   CIlower   CIupper
+0        K-NN    0.9372  mnist1000  0.930505  0.943895
+1        Tree    0.7776  mnist1000  0.766123  0.789077
+2      Forest    0.9436  mnist1000  0.937233  0.949967
+3  Neural Net    0.9364  mnist1000  0.929665  0.943135
