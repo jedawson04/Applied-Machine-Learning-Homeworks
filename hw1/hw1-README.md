@@ -97,7 +97,7 @@ $$
 I_{monks}=[0.8333 - (1.96 * SE_{monks}),0.8333+(1.96 * SE_{monks})] = [0.76,0.90].
 $$
 
-Similarly we may calculate the other 3 Hamming distance intervals: 
+Similarly we may calculate the other 3 Hamming distance intervals, 
 
 $$
 I_{Hpenguins}=[0.61,0.81]
@@ -111,7 +111,7 @@ $$
 I_{Hmnist1000}=[0.75,0.78],
 $$
 
-and our 3 Euclidian distance intervals: 
+and our 3 Euclidian distance intervals, 
 
 $$
 I_{Epenguins}=[0.73,0.90]
@@ -167,7 +167,7 @@ In mnist100, the first data set I picked, raising this hyperparameter had almost
 
 In penguins, I believe that since the data set is so small and (as we saw in lab2 through scikit-learn) so close together, by considering more neighbors nearby, we are grabbing the wrong species of penguin, and the more neighbors we consider, the more often we make the wrong prediction (at least for k = 1,3,5).
 
-For monks1, since there are only two groups of data (yes and no) we can see that by raising the amount of nearby neighbors we consider, the average label becomes more correct. 
+For monks1, since there are only two groups of data (yes and no) we can see that by raising the amount of nearby neighbors we consider, the average label is more often correct. 
 
 ## Bonus Question (Optional)
 

@@ -62,7 +62,7 @@ b. Calculate the 95% confidence interval around each accuracy in your answer to 
 
 Using your program, visualize the tree for the penguins.csv data set learned in Question 1a.  Upload the tree visualization to GitHub as an image file. 
 
-**Decision tree vizualization file is 'tree_penguins_1t_75p_1234'**
+**Decision tree vizualization file can be found at '../Figures/hw2-figures/tree_penguins_1t_75p_1234'**
 
 a. What rules were learned by this tree?
 
@@ -117,7 +117,7 @@ This predicted label is Adelie
 
 b. How do these rules relate to your analysis in Lab 2 when you compared the average values of each attribute for each label (e.g., how the average bill length differed between the three species)?
 
-Many of these rules relate to (or in some cases are the same as) numbers that are at or near the averanges observed in Lab 2. This is especially true for rules that had much higher 'values', meaning more instances fit the rules. This makes sense as the rules that can be thought of as the 'biggest buckets' of penguin indentification would be more in line with the averages observed. We also observed that the body mass of the penguin was used in very few rules and thus didn't have a very high correlation with accuracy (this was also observed in the bonus question for hw1). This issue is likely due to the large differences between body masses, which are greatly exaggerated by squaring the difference in the Euclidian metric (which was touched on in Lab 4). 
+Many of these rules relate to (or in some cases are the same as) numbers that are at or near the averanges observed in Lab 2. This is especially true for rules that had much higher 'values', meaning more instances fit the rules. This makes sense as the rules that can be thought of as the 'biggest buckets' of penguin identification would be more in line with the averages observed. We also observed that the body mass of the penguin was used in very few rules and thus didn't have a very high correlation with accuracy (this was also observed in the bonus question for hw1). This issue is likely due to the large differences between body masses, which are greatly exaggerated by squaring the difference in the Euclidian metric (which was touched on in Lab 4). 
 
 #### Question 3
 
@@ -147,12 +147,11 @@ a. Calculate the recall for your tree for each label.
 
 b. Which label had the *lowest* recall?  Why do you think this label had the lowest?
 
-*nine* - a low recall value means that the model struggled to identify nines, which makes sense since they look a lot like other numbers. In particular, ones, eights, and sevens.
-
+*nine* - a low recall value means that the model struggled to identify nines, which makes sense since they look a lot like other numbers, eights and sevens in particular.
 
 c. Which label had the *highest* recall? Why do you think this label had the highest?
 
-*one* - a high recall value means the model succeeded at identifing ones, this means that the ones stood out more than other numbers and were not confused for them less often. This might be because 
+*one* - a high recall value means the model succeeded at identifing ones, this means that the ones stood out more than other numbers and were not confused for them less often. This may be due to the simple way the number is written, however, the high recall value  could be due to variation present in the seed, as other recalls are close as well.
 
 #### Question 4
 
@@ -176,23 +175,23 @@ c. Based on the data in the seismic.csv data set and the counts in your confusio
 
 Using a seed of 1234, train a tree for each of the training percentages in [0.2, 0.4, 0.6, 0.8] with the mnist1000.csv, occupancy.csv, and penguins.csv data sets.  Plot the accuracies of the trees as a line chart, with training percentage as the x-axis, accuracy as the y-axis, and separate lines (in the same chart) for each data set.  Upload your line chart to GitHub as an image file.
 
-**Line charts are 'Q5_line_plot' and 'Q5_line_plot_scaled'**
+**Line charts are found in '../Figures/hw2-figures/Q5_line_plot' and '../Figures/hw2-figures/Q5_line_plot_scaled'**
 
 a. What trends do you see for each data set?
 
 - mnist1000: Mnist1000 increases the most overall, especially in the beginning, before it tapers off.  
 
-- occupancy: Occupancy has no (visible) increase in accuracy as the training percent is increased.
+- occupancy: Occupancy has no (visible) increase in accuracy as the training percentage is increased.
 
-- penguins: Penguins had a large increase in accuracy but not as much as mnist1000.
+- penguins: Penguins had a large increase in accuracy, but not as much as mnist1000.
 
 b. Why do you think those trends occurred for each data set?
 
-- As the training percentage is increased the increase in accuracy tapers off and settles around 80 ish%. I wonder if this is because of the limitations of the model on this data set and the conflation of two of the numbers. 
+- mnist1000: As the training percentage is increased, the increase in accuracy tapers off and settles around 80%. We are unsure if this is due to a limitations of the model on this data set or the conflation of two numbers. 
 
-- Occupancy has no increase, which might mean the model identifies the same patterns no matter the percent of training used. Also there are 20000 data points, so 20% of the data is still 5000 data points, which is sufficient to identify the trends present.
+- occupancy: Occupancy has no increase, which might mean the model identifies the same patterns no matter the percent of training used. Also, there are 20000 instances--meaning 20% is 5000--which is sufficient to identify the trends present.
 
-- It makes sense there is an increase in accuracy when more data is used for the penguins set since the set is so small, this data set also tapers off but around 95%. I'm not sure why 95% specifically, but I believe similar to mnist1000, this is a limitation in the model where 5-10% of the penguin data is conflated with another penguin. It would be interesting to identify the incorrect predictions in the tree and see if there are commonalities between them, since the data set is so small.
+- penguins: Applying the same logic from occupancy, it makes sense there is an increase in accuracy when more instances are used since the data set is so small. This set tapers off in accuracy around 95%. We're not sure why 95% specifically, but we believe that, similar to mnist1000, this is a limitation in the model where 5-10% of the penguin data is conflated with another penguin. It would be interesting to identify the incorrect predictions in the tree and see if there are commonalities between them.
 
 #### Question 6
 
@@ -214,7 +213,7 @@ a. What is the accuracy of the test set predictions of each forest that you lear
 
 b. Calculate the 95% confidence interval around each accuracy in your answer to Question 6a.
 
-*Confidence Intervals here were calculated the same as  in 1b*
+*Confidence Intervals here were calculated the same as in 1b*
 
 - banknotes: Calculated Standard Error: 0.0029. Calculated 95% Confidence Interval: [0.9914, 1].
 
@@ -244,13 +243,13 @@ a. For each data set, did any model (tree or forest) statistically significantly
 
 b. Based on your answer to Question 7a, what conclusions can you draw about the usefulness of training more than one tree in a random forest?
 
-More trees allows us to water down any inconsistencies that might be present in a single tree. In each case this should give us more accurate predictions because averaging the results of multiple trees will minimize the random error in a given tree.
+More trees allows us to water down any inconsistencies that might be present in a single tree. In each case, this should give us more accurate predictions because averaging the results of multiple trees will reduce stochastic error in a given tree.
 
 #### Question 8
 
 Using a seed of 1234, a training percentage of 0.75, and each of the numbers of trees in [10, 20, 30, 40, 50, 60, 70, 80, 90, 100], train a random forest for only the mnist1000.csv data set.  Plot the accuracies of the forest as a line chart, with number of trees as the x-axis and accuracy as the y-axis.  Upload your line chart to GitHub as an image file.
 
-**Line charts are 'Q8_line_plot' and 'Q8_line_plot_scaled'**
+**Line charts seen in '../Figures/hw2-figures/Q8_line_plot' and '../Figures/hw2-figures/Q8_line_plot_scaled'**
 
 a. What trend do you observe? 
 
@@ -258,8 +257,8 @@ There is a sharp increase in accuracy that tapers off around 30 trees.
 
 b. Why do you think this trend occurred for this data set? 
 
-We think the increase is due to the increased number of trees. Any potential inaccuries/inconsistenties are watered down by the larger amount of trees. We think that the taper off is due to a limitation in the number of patterns that are identifiable in the numbers (variance between people's handwritings). 
- 
+We think the increase is due to the increased number of trees. Any potential inaccuries/inconsistenties are watered down by the larger amount of trees. We think that the taper off is due to a limitation in the number of patterns that are identifiable in the numbers (in this case, variance between people's handwritings). 
+
 # Additional Questions
 
 Please answer these questions after you complete the assignment:
@@ -273,5 +272,5 @@ We had a lot of fun implementing the methods, it was cool to see how much less c
 7-8 hours each.
 
 3. Did you adhere to the Honor Code?
-    
+
 Yes
